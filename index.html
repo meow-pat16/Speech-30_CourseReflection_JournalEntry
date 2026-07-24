@@ -364,7 +364,39 @@
       </div>
     </div>
 
-    <script src="info.js"></script>
+    <script>
+    function redirectToPage(event) {
+    event.preventDefault();
+
+    const user = document.getElementById('user').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    const modal = document.getElementById('errorModal');
+    const closeModalBtn = document.getElementById('closeModalButton');
+
+    function closeModal() {
+        modal.style.display = "none";
+    }
+
+    if (user === "speech30_X4-1" && password === "reflection_soriano_123") {
+
+        document.body.classList.add("day");
+
+        setTimeout(() => {
+            window.location.href = "welcome.html";
+        }, 1500);
+
+    } else {
+        modal.style.display = "block";
+        closeModalBtn.onclick = closeModal;
+
+        window.onclick = function(e) {
+            if (e.target == modal) closeModal();
+        };
+    }
+}
+
+</script>
 
     <script>
       function redirectToPage(event) {
