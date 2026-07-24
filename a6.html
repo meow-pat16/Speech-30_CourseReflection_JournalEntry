@@ -43,10 +43,47 @@
         height: 100%;
         top: 0;
         left: 0;
-        z-index: 1;
-        background-image: radial-gradient(ellipse at center, #4a90d9, #002366);
+        z-index: 0;
       }
 
+      /* Animated calm pastel background */
+      @keyframes rainbowShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      #particles-js {
+        background: linear-gradient(
+          135deg,
+          #ffb3ba,
+          /* Pastel Pink */ #ffdfba,
+          /* Pastel Orange */ #ffffba,
+          /* Pastel Yellow */ #baffc9,
+          /* Pastel Green */ #bae1ff,
+          /* Pastel Blue */ #e8c4ff,
+          /* Pastel Purple */ #ffb3ba /* Loop back to Pink */
+        );
+        background-size: 400% 400%;
+        /* Slowed down from 10s to 30s for a calm fluid look */
+        animation: rainbowShift 30s ease infinite;
+      }
+
+      /* soft overlay so it looks even calmer */
+      #particles-js::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.15);
+        pointer-events: none;
+      }
+      
       .card-container {
         position: relative;
         width: min(90vw, 450px);
@@ -147,7 +184,7 @@
       }
 
       .stamp-button::after {
-        content: "❤";
+        content: "🌟";
         color: white;
         font-size: clamp(22px, 4vw, 34px);
       }
