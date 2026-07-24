@@ -12,7 +12,10 @@
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
-          <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🩵</text></svg>">
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🩵</text></svg>"
+    />
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <title>reflection ❀</title>
@@ -37,6 +40,7 @@
         perspective: 1000px;
       }
 
+      /* Single clean definition for particles background */
       #particles-js {
         position: fixed;
         width: 100%;
@@ -44,9 +48,27 @@
         top: 0;
         left: 0;
         z-index: 0;
+        background: linear-gradient(
+          135deg,
+          #ffb3ba,
+          #ffdfba,
+          #ffffba,
+          #baffc9,
+          #bae1ff,
+          #e8c4ff,
+          #ffb3ba
+        );
+        background-size: 400% 400%;
+        animation: rainbowShift 30s ease infinite;
       }
 
-      /* Animated calm pastel background */
+      /* Ensures the generated canvas fills the entire screen so particles render */
+      #particles-js canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
       @keyframes rainbowShift {
         0% {
           background-position: 0% 50%;
@@ -59,23 +81,7 @@
         }
       }
 
-      #particles-js {
-        background: linear-gradient(
-          135deg,
-          #ffb3ba,
-          /* Pastel Pink */ #ffdfba,
-          /* Pastel Orange */ #ffffba,
-          /* Pastel Yellow */ #baffc9,
-          /* Pastel Green */ #bae1ff,
-          /* Pastel Blue */ #e8c4ff,
-          /* Pastel Purple */ #ffb3ba /* Loop back to Pink */
-        );
-        background-size: 400% 400%;
-        /* Slowed down from 10s to 30s for a calm fluid look */
-        animation: rainbowShift 30s ease infinite;
-      }
-
-      /* soft overlay so it looks even calmer */
+      /* Soft overlay for calm look */
       #particles-js::after {
         content: "";
         position: absolute;
@@ -83,8 +89,7 @@
         background: rgba(255, 255, 255, 0.15);
         pointer-events: none;
       }
-        /* soft rainbow shimmer border animation */
-   
+
       @keyframes borderShift {
         0% {
           border-color: #ffb3ba;
@@ -123,6 +128,7 @@
             0 0 24px rgba(255, 179, 186, 0.6);
         }
       }
+
       .card-container {
         position: relative;
         width: min(90vw, 450px);
@@ -284,9 +290,46 @@
       <div class="back">
         <h1 class="script-text">☆*:.｡.Journal Entry.｡.:*☆</h1>
         <p>
-          Even before the start of our speech class, I was quite nervous to take it because of the tight midyear schedule I had gotten (I had a class at iMath directly before) but also primarily because I feel like I haven’t been as confident in my own abilities and in conveying my own thoughts and ideas since I’ve started college. I was nervous to not be able to connect much with classmates because I would always be late (which was fortunately not the case), and I was nervous that I wouldn’t be able to articulate the things I wanted to say well enough…even in simply choosing topics for particular speeches I had a good amount of resistance and overthinking during the process. As days went on though and well into the class meetings, I fortunately realized that this wouldn’t exactly be the case and found myself growing more and more comfortable again with sharing in class, especially speech class. I really really appreciated the emphasis given in class, to which the focus is the ability to effectively communicate and convey thoughts and ideas, rather than only the technicalities like language, fluency, specific adherence to historic frameworks, etc. I believe it played a big role in letting my “guard” down (if that’s what you’d call it) in class. <br/> <br/> As class sessions and other larger activities passed, I found myself enjoying more and more which made me quite glad. I had connected with more classmates through group activities such as the ProdAd and the Speech Writing Workshop, and enjoyed being able to exchange thoughts and feedback even on topics that aren’t particularly yours but you have something to add or share about. With all the new types of challenges conquered and encountered through the class, some unexpected and new while others familiar but still challenging, I’m really glad I was able to take and finish speech 30 this mid year term (dare I say successfully). I feel like after this class I’ve grown even just a little bit more toward being more confident with my own voice again, and not simply hiding myself in the shadows of my peers. On the other hand, while also understandable given the tighter midyear schedule, I feel like a lot of lighter, less grade/commitment heavy activities were missed though, short activities which help foster skills during in class lectures more—like our build-a-speech activity—and could be incorporated better during regular semester classes. All in all, all I can really say is I enjoyed a lot and learned a lot through Speech 30 and am really glad to have taken our class! Thank you for the term po Mx. Manna!
-          <br /><br />
-  
+          Even before the start of our speech class, I was quite nervous to take
+          it because of the tight midyear schedule I had gotten (I had a class
+          at iMath directly before) but also primarily because I feel like I
+          haven’t been as confident in my own abilities and in conveying my own
+          thoughts and ideas since I’ve started college. I was nervous to not be
+          able to connect much with classmates because I would always be late
+          (which was fortunately not the case), and I was nervous that I
+          wouldn’t be able to articulate the things I wanted to say well
+          enough…even in simply choosing topics for particular speeches I had a
+          good amount of resistance and overthinking during the process. As days
+          went on though and well into the class meetings, I fortunately
+          realized that this wouldn’t exactly be the case and found myself
+          growing more and more comfortable again with sharing in class,
+          especially speech class. I really really appreciated the emphasis
+          given in class, to which the focus is the ability to effectively
+          communicate and convey thoughts and ideas, rather than only the
+          technicalities like language, fluency, specific adherence to historic
+          frameworks, etc. I believe it played a big role in letting my “guard”
+          down (if that’s what you’d call it) in class. <br />
+          <br />
+          As class sessions and other larger activities passed, I found myself
+          enjoying more and more which made me quite glad. I had connected with
+          more classmates through group activities such as the ProdAd and the
+          Speech Writing Workshop, and enjoyed being able to exchange thoughts
+          and feedback even on topics that aren’t particularly yours but you
+          have something to add or share about. With all the new types of
+          challenges conquered and encountered through the class, some
+          unexpected and new while others familiar but still challenging, I’m
+          really glad I was able to take and finish speech 30 this mid year term
+          (dare I say successfully). I feel like after this class I’ve grown
+          even just a little bit more toward being more confident with my own
+          voice again, and not simply hiding myself in the shadows of my peers.
+          On the other hand, while also understandable given the tighter midyear
+          schedule, I feel like a lot of lighter, less grade/commitment heavy
+          activities were missed though, short activities which help foster
+          skills during in class lectures more—like our build-a-speech
+          activity—and could be incorporated better during regular semester
+          classes. All in all, all I can really say is I enjoyed a lot and
+          learned a lot through Speech 30 and am really glad to have taken our
+          class! Thank you for the term po Mx. Manna! <br /><br />
           <span class="script-text" style="font-size: clamp(22px, 4vw, 30px)"
             >Audrey</span
           >
@@ -311,21 +354,26 @@
       window.onload = function () {
         particlesJS("particles-js", {
           particles: {
-            number: { value: 150, density: { enable: true, value_area: 800 } },
-            color: { value: ["#ffffff", "#aacfee", "#1a6fc4", "#ddeeff"] },
+            number: { value: 90, density: { enable: true, value_area: 800 } },
+            color: {
+              value: [
+                "#ffb3ba",
+                "#ffdfba",
+                "#ffffba",
+                "#baffc9",
+                "#bae1ff",
+                "#e8c4ff",
+              ],
+            },
             shape: { type: "circle" },
-            opacity: { value: 0.6, random: true },
+            opacity: { value: 0.7, random: true },
             size: { value: 3.5, random: true },
             line_linked: {
-              enable: true,
-              distance: 150,
-              color: "#5b9bd5",
-              opacity: 0,
-              width: 1,
+              enable: false /* Disabled so they float as pure rainbow sparkles */,
             },
             move: {
               enable: true,
-              speed: 4,
+              speed: 1.5,
               direction: "none",
               random: true,
               straight: false,
@@ -336,13 +384,13 @@
           interactivity: {
             detect_on: "window",
             events: {
-              onhover: { enable: true, mode: "grab" },
+              onhover: { enable: true, mode: "bubble" },
               onclick: { enable: true, mode: "push" },
               resize: true,
             },
             modes: {
-              grab: { distance: 200, line_linked: { opacity: 0.8 } },
-              push: { particles_nb: 25 },
+              bubble: { distance: 200, size: 6, duration: 2, opacity: 0.8 },
+              push: { particles_nb: 10 },
             },
           },
           retina_detect: true,
